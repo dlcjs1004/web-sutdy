@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.btn-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: center;
+}
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    /* text-transform에서 uppercase는 모든문자를 대문자로, lowercase는 소문자로, capitalize는 각 단어의 첫 문자를 대문자로 만듦 */
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 15px;
+    padding: 10px 5px;
+    background: none;
+    color: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #a29bfe;
+    z-index: -1;
+    transition: all .5s ease-out;
+}
+
+.btn1:hover {
+    background: #a29bfe;
+}
+
+.btn2:hover::after,
+.btn3:hover::after,
+.btn4:hover::after {
+    width: 100%;
+}
+
+.btn3::after {
+    left: auto;
+    right: 0;
+}
+
+.btn4::after {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.btn5::after,
+.btn6::after {
+    top: auto;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+}
+.btn5:hover::after,
+.btn6:hover::after {
+    height: 100%;
+}
+
+.btn6::after {
+    bottom: auto;
+    top: 0;
+}
+
+.btn7::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 0;
+    height: 900%;
+}
+.btn7:hover::after {
+    width: 100%;
+}
